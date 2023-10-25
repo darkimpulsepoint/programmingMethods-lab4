@@ -142,6 +142,7 @@ void task4() {
 
 
     double p = 1;
+    const int startNumber = -3;
     int k = 0;
  
     cout << "\t k\n"
@@ -153,6 +154,11 @@ void task4() {
 
     cout << "Введите k: " << endl;
     cin >> k;
+
+    if (k<startNumber){
+        cout << "k не может быть меньше " << startNumber << ",устанавливаем " << startNumber << endl;
+        k = startNumber;
+    }
 
     for (int i = -3; i <= k; i++){
         p *= static_cast<double>((i+2)*abs(i-4))/factorial(i+3);
